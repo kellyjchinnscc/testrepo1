@@ -9,10 +9,10 @@ td
     height: 40px;
     width: 40px;
     border-style: ridge;
-    border-color: black;
+    border-color: gray;
     cursor: crosshair;
     text-align: center;
-    border-radius: 10px;
+    border-radius: 5px;
 }
 
 #theGameBoard

@@ -46,7 +46,6 @@ fetch(localFile)
     {
         shipPiecesArray = layOutThree
     }
-    console.log(shipPiecesArray)
 
     for(let i = 0; i < 10; i++) // outer loop creating rows and appending each row to the table
     {
