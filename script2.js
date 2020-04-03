@@ -27,10 +27,29 @@ fetch(localFile)
     messageDiv.appendChild(missileCountDiv);
 
     let hitCount = 0;
+    let shipPiecesArray = []
+
+    let layOutOne = ["1-2", "1-3", "1-4", "3-0", "3-1", "3-2", "3-3", "5-0", "6-0", "7-0", "8-0", "9-0", "8-1", "9-1", "4-3", "4-4", "4-5"]
+    let layOutTwo = ["0-0", "0-1", "0-2", "0-3", "0-4", "6-5", "7-5", "8-5", "1-1", "1-2", "3-1", "4-1", "5-1", "6-1", "7-1", "6-2", "7-2"]
+    let layOutThree = ["3-3", "4-4", "5-5", "6-6", "7-7", "9-9", "8-9", "7-9", "1-1", "2-1", "3-1", "1-3", "1-4", "1-5", "1-6", "8-0", "9-0"]
+
+    let randomNum = Math.floor(Math.random() * 3);
+    if(randomNum === 1)
+    {
+        shipPiecesArray = layOutOne;
+    }
+    else if(randomNum === 2)
+    {
+        shipPiecesArray = layOutTwo
+    }
+    else
+    {
+        shipPiecesArray = layOutThree
+    }
+    console.log(shipPiecesArray)
 
     for(let i = 0; i < 10; i++) // outer loop creating rows and appending each row to the table
     {
-        let shipPiecesArray = ["0-0", "0-1", "0-2", "0-3", "0-4", "0-5", "0-6", "0-7", "0-8", "0-9", "3-1", "4-1", "5-1", "6-1", "7-1", "6-2", "7-2", "8-2", "9-2"]
         let gameRows = document.createElement('tr'); // creating rows
         gameTable.appendChild(gameRows); // appending to the table
 
@@ -81,12 +100,12 @@ fetch(localFile)
                     hitMissMessage.innerHTML = " "
                 }
                 // WIN/LOSE CONDITION
-                if(hitCount == 19) // WIN CONDITION
+                if(hitCount == 17) // WIN CONDITION
                 {
                     hitMissMessage.innerHTML = ''
                     missileCountDiv.innerHTML = `You sank all ships! Ayy!!`
                 }
-                else if(missileCount === 0 && hitCount !== 19) // LOSE CONDITION
+                else if(missileCount === 0 && hitCount !== 17) // LOSE CONDITION
                 {
                     missileCountDiv.innerHTML = `You've used up all of your missles and you didn't sink everything. Sorry mate!`
                     hitMissMessage.innerHTML = '';
