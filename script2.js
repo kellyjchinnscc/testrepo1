@@ -87,11 +87,16 @@ fetch(localFile)
                 }
                 else if(!shipPiecesArray.includes(gameCell.id))
                 {
-                    gameCell.innerHTML = "O"
+                    // gameCell.innerHTML = "O"
                     gameCell.style.backgroundColor = "white"
                     hitMissMessage.innerHTML = "Miss.."
                     gameCell.className = "usedCoordinate";
                     missileCount = missileCount - 1;
+                    let missIcon = document.createElement('img')
+                    missIcon.setAttribute("src", "x.png")
+                    missIcon.style.height = "30px";
+                    missIcon.style.width = "30px";
+                    gameCell.appendChild(missIcon)
                     // missileCountDiv.innerHTML = `You now have ${missileCount} missiles left!`
                 }
 
