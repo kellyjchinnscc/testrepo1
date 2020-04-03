@@ -58,7 +58,7 @@ fetch(localFile)
             let gameCell = document.createElement('td'); // creating each cell
             gameCell.id = i + "-" + j; // creating unique ID's for each cell
             gameCell.className = "unusedCoordinate"
-            gameCell.style.backgroundColor = "darkblue"; // setting the default colour for each cell
+            gameCell.style.backgroundColor = "skyblue"; // setting the default colour for each cell
             gameRows.appendChild(gameCell); // appending each cell to their respective row
             
 
@@ -72,12 +72,17 @@ fetch(localFile)
                 }
                 else if(shipPiecesArray.includes(gameCell.id))
                 {
-                    gameCell.innerHTML = "X";
+                    // gameCell.innerHTML = "X";
                     gameCell.style.backgroundColor = "red";
                     hitMissMessage.innerHTML = "Hit!"
                     gameCell.className = "usedCoordinate";
                     missileCount = missileCount - 1;
                     hitCount = hitCount + 1;
+                    let explosionIcon = document.createElement('img')
+                    explosionIcon.setAttribute("src", "1476274.png")
+                    explosionIcon.style.height = "30px";
+                    explosionIcon.style.width = "30px";
+                    gameCell.appendChild(explosionIcon)
                     // missileCountDiv.innerHTML = `You now have ${missileCount} missiles left!`
                 }
                 else if(!shipPiecesArray.includes(gameCell.id))
