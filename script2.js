@@ -81,12 +81,12 @@ fetch(localFile)
                     hitMissMessage.innerHTML = " "
                 }
                 // WIN/LOSE CONDITION
-                if(hitCount == 15) // WIN CONDITION
+                if(hitCount == 19) // WIN CONDITION
                 {
                     hitMissMessage.innerHTML = ''
                     missileCountDiv.innerHTML = `You sank all ships! Ayy!!`
                 }
-                else if(missileCount === 0 && hitCount !== 15) // LOSE CONDITION
+                else if(missileCount === 0 && hitCount !== 19) // LOSE CONDITION
                 {
                     missileCountDiv.innerHTML = `You've used up all of your missles and you didn't sink everything. Sorry mate!`
                     hitMissMessage.innerHTML = '';
