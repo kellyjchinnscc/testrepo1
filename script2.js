@@ -113,11 +113,13 @@ fetch(localFile)
                 {
                     hitMissMessage.innerHTML = ''
                     missileCountDiv.innerHTML = `You sank all ships! Ayy!!`
+                    gameTable.innerHTML = "";
                 }
                 else if(missileCount === 0 && hitCount !== 17) // LOSE CONDITION
                 {
                     missileCountDiv.innerHTML = `You've used up all of your missles and you didn't sink everything. Sorry mate!`
                     hitMissMessage.innerHTML = '';
+                    gameTable.innerHTML = "";
                 }
             })
         }
