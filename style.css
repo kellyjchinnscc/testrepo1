@@ -1,7 +1,8 @@
 body
 {
     font-family: Arial, Helvetica, sans-serif;
-    background-image: url(https://vignette.wikia.nocookie.net/advancewars/images/c/c1/Battleships.gif/revision/latest/scale-to-width-down/340?cb=20090518201454);
+    /* background-image: url(https://vignette.wikia.nocookie.net/advancewars/images/c/c1/Battleships.gif/revision/latest/scale-to-width-down/340?cb=20090518201454); */
+    background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
 }
 
 td
@@ -31,8 +32,8 @@ h2, h3
 {
     display: block;
     text-align: center;
-    color: rgb(255, 251, 0);
-    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    /* color: rgb(255, 251, 0); */
+    /* text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black; */
 }
 
 img
@@ -41,5 +42,5 @@ img
 }
 
 header{
-    background-color: white;
+    /* background-color: white; */
 }
